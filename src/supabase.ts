@@ -7,8 +7,8 @@ import { createClient } from '@supabase/supabase-js';
 import { PoliceReport } from './types';
 
 // Read config safely from import.meta.env
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const supabaseUrl = (import.meta as any).env.VITE_SUPABASE_URL;
+const supabaseAnonKey = (import.meta as any).env.VITE_SUPABASE_ANON_KEY;
 
 // Check if setup is valid
 const hasValidConfig = () => {
